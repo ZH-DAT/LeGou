@@ -347,32 +347,116 @@
     height: 450px;
     background-color: #f9f9f9;
 }
+.ebooks .left-box .content .ads .top-img{
+    width: 236px;
+    height: 290px;
+}
+.ebooks .left-box .content .ads .bottom-text{
+    width: 236px;
+    height: 160px;
+}
+.ebooks .left-box .content .ads .bottom-text ul{
+    width: 235px;
+    height: 160px;
+    margin-left: 1px;
+}
+.ebooks .left-box .content .ads .bottom-text ul li {
+    float: left;
+    width: 78px;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 5px  ;
+
+}
 /* 右侧图书列表*/
 .ebooks .left-box .content .ebooks-list{
     height: 450px;
     width: 670px;
     background-color:#ccc;
 }
-.ebooks .left-box .content .ebooks-list ul li{
+.ebooks .left-box .content .ebooks-list > ul > li{
     float: left;
     height: 223px;
     width: 165px;
     background-color: #fff;
     margin-left: 2px;
     margin-bottom: 2px;
+    text-align: center;
+}
+.ebooks .left-box .content .ebooks-list > ul > li > p {
+    text-align: left;
+    text-indent: 10px;
+}
+.ebooks .left-box .content .ebooks-list > ul > li > img{
+    margin: 15px auto;
+}
+.ebooks .left-box .content .ebooks-list > ul > li > p:first-child{
+    font-size: 18px;
 }
 
+.ebooks .left-box .content .ebooks-list > ul > li > p:not(:first-child){
+    color: red;
+}
+.ebooks .left-box .content .ebooks-list > ul > li > p:last-child{
+    font-size: 14px;
+}
+/* 轮播容器 */
+.ebooks .left-box .content .ebooks-list > ul > li:first-child{
+    height: 223px;
+    width: 332px;
+    background-color:green;
+}
+.ebooks .left-box .content .ebooks-list > ul > li:first-child .pptbox{
+    width: 332px;
+    height: 223px;
+    background-color: pink;
+}
 /* 右侧盒子*/
 .ebooks .right-box{
     width: 286px;
-    height: 496px;
-    background-color: deeppink;
+    height: 456px;
+    margin-top: 40px;
+    border: 2px solid #ccc;
+    /* 变为怪异盒子 */
+    box-sizing: border-box;
 }
+.ebooks .right-box .title{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: 200px;
+    color: #333;
+}
+.ebooks .right-box ul li{
+    font-size: 16px;
+    line-height: 42px;
+    text-indent: 5px;
 
+}
+.ebooks .right-box ul li .desc{
+    font-size: 14px;
+    line-height: 18px;
+    height: 150px;
+    color: #333;
+/* 详情默认隐藏 只有第一个显示 */
+display: none;
 
+}
+.ebooks .right-box ul li .desc img{
+    margin-right: 9px;
+}
+.ebooks .right-box ul li:first-child .ebooks-title{
+    /* 只有第一个标题隐藏 */
+    display: none;
+}
+.ebooks .right-box ul li:first-child .desc{
+    display: block;
+}
 /* 6==========================================================.服装==========================================================*/
 
 .clothes {
+    margin-top: 36px;
     height: 500px;
     background-color: #ccc;
 }
