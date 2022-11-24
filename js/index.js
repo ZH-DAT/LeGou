@@ -110,4 +110,40 @@ $(function () {
             scrollTop:0
         })
     })
-})
+
+
+// 二维码滑出
+$('.qr-code .ticket').hover(function(){
+    // 让二维码划出来
+    $('.qr-code div').stop(true).animate({
+        left:'-100px'
+        })
+    },function(){
+        $('.qr-code div').stop(true).animate({
+            left:'0px'
+            })
+        })
+
+        // 顶部搜索框
+        $(document).scroll(function(){
+            // 获取到顶部的距离
+            var topDistance = $('html, body').scrollTop();
+            if(topDistance>500){
+                $('.top-search-box').slideDown(200)
+            }else{
+                $('.top-search-box').slideUp(200)
+            }
+        })
+        // 楼梯跳转
+        $('.floor li').click(function(){
+            // 获取索引
+            var index = $(this).index();
+            // 选中每个版块到顶部偏移
+            var topOffset = $('.floorBox').eq(index).offset().top;
+            console.log(topOffset)
+            // 让滚动条到这个位置
+            $('html, body').animate({
+                scrollTop:topOffset
+            })
+        })
+    })
