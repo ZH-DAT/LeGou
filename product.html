@@ -12,7 +12,8 @@
 	<!--引入样式-->
 	<link rel="stylesheet" href="../../trunk/code/CSS/reset.css">
 	<link rel="stylesheet" href="../../trunk/code/CSS/common.css">
-	<link rel="stylesheet" href="../../trunk/code/CSS/shopcart.css">
+	<link rel="stylesheet" href="../../trunk/code/CSS/magnifier.css">
+	<link rel="stylesheet" href="../../trunk/code/CSS/productDetail.css">
 	<link rel="stylesheet" href="./CSS/index.css">
 </head>
 
@@ -64,61 +65,82 @@
 			</ul>
 		</div>
 	</div>
-	<div class="shopcart container">
-		<!-- 全部商品 -->
-		<h3>全部商品 (<i class="goodsCount">2</i> )</h3>
-		<!-- 表格 -->
-		<table>
-			<thead>
-				<tr>
-					<th><input type="checkbox"> 全选</th>
-					<th>商品</th>
-					<th>单价</th>
-					<th>数量</th>
-					<th>小计</th>
-					<th>操作</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>
-						<img src="../../trunk/code/images/img/ebooks.jpg" alt="">从你的全世界路过
-					</td>
-					<td class="price">41.00</td>
-					<td>
-						<button class="add">+</button>
-						<input type="text" value="1">
-						<button class="reduce">-</button>
-					</td>
-					<td class="subprice">41.00</td>
-					<td class="del">删除</td>
-				</tr>
-			</tbody>
-			<tbody>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>
-						<img src="../../trunk/code/images/img/ebooks.jpg" alt="">从你的全世界路过
-					</td>
-					<td class="price">11.00</td>
-					<td>
-						<button class="add">+</button>
-						<input type="text" value="1">
-						<button class="reduce">-</button>
-					</td>
-					<td class="subprice">11.00</td>
-					<td class="del">删除</td>
-				</tr>
-			</tbody>
-		</table>
-		<div class="totalPrice">
-			<input type="checkbox">全选
-			<span class="deleteChecked">删除选中商品</span>
-			<span>已选择<i class="count">0</i> 件商品</span>
-			<span>总价：<i class="total">00.00 </i></span>
-			<button>去结算</button>
+
+	<!-- 产品详情 -->
+	<div class="product-detail container clearfix">
+		<div class="left-box fl">
+			<!-- 放大镜容器 -->
+			<div class="magnifier" id="magnifier1">
+				<div class="magnifier-container">
+					<div class="images-cover"></div>
+					<!--当前图片显示容器-->
+					<div class="move-view"></div>
+					<!--跟随鼠标移动的盒子-->
+				</div>
+
+				<div class="magnifier-assembly">
+					<div class="magnifier-btn">
+						<span class="magnifier-btn-left">&lt;</span>
+						<span class="magnifier-btn-right">&gt;</span>
+					</div>
+					<!--按钮组-->
+					<div class="magnifier-line">
+						<ul class="clearfix animation03">
+							<li>
+								<div class="small-img">
+									<img src="../../trunk/code/images/素材图片/书籍/sfq4.png" />
+								</div>
+							</li>
+							<li>
+								<div class="small-img">
+									<img src="../../trunk/code/images/素材图片/书籍/sfq6.png" />
+								</div>
+							</li>
+							<li>
+								<div class="small-img">
+									<img src="../../trunk/code/images/素材图片/书籍/sfq7.png" />
+								</div>
+							</li>
+							<li>
+								<div class="small-img">
+									<img src="../../trunk/code/images/素材图片/书籍/sfq4.png" />
+								</div>
+							</li>
+							<li>
+								<div class="small-img">
+									<img src="../../trunk/code/images/素材图片/书籍/sfq5.png" />
+								</div>
+							</li>
+							<li>
+								<div class="small-img">
+									<img src="../../trunk/code/images/素材图片/书籍/sfq6.png" />
+								</div>
+							</li>
+							<li>
+								<div class="small-img">
+									<img src="../../trunk/code/images/素材图片/书籍/sfq7.png" />
+								</div>
+							</li>
+							<li>
+								<div class="small-img">
+									<img src="../../trunk/code/images/素材图片/书籍/sfq4.png" />
+								</div>
+							</li>
+							<li>
+								<div class="small-img">
+									<img src="../../trunk/code/images/素材图片/书籍/sfq5.png" />
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!--缩略图-->
+				</div>
+				<div class="magnifier-view"></div>
+				<!--经过放大的图片显示容器-->
+			</div>
 		</div>
+		<div class="right-box fr"></div>
+
 	</div>
 
 	<!-- 11.尾部 -->
@@ -133,7 +155,7 @@
 					<img src="../../trunk/code/images/img/btm2.png" alt="">
 				</li>
 				<li>
-					<img src="../../trunk/code/images/img/btm3.png" alt="">
+					<img src="../../trunk/code/images/img/btm3.png " alt="">
 				</li>
 				<li>
 					<img src="../../trunk/code/images/img/btm4.png" alt="">
@@ -200,7 +222,8 @@
 
 	<!-- 引入jquery.min.js-->
 	<script src="../../trunk/code/js/jquery-1.11.0.js"></script>
-	<script src="../../trunk/code/js/shopcart.js"></script>
+	<script src="../../trunk/code/js/productDetail.js"></script>
+	<script src="../../trunk/code/js/magnifier.js"></script>
 </body>
 
 </html>
